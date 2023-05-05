@@ -56,3 +56,20 @@ console.log(100n) // BigInt字面量
 // ########### Data类型 ###########
 console.log(new Date())   // UTC时间
 console.log(Date.now())   // 1683296996479
+
+
+// ########### 字符串类型 ###########
+
+console.log("This is a string")        // 双引号
+console.log('This is another string')  // 单引号
+console.log("I'm a good boy")          // 双引号中可以包含单引号
+console.log('test for "')              // 单引号中可以包含双引号
+
+// 反引号字符串
+let paragraph = `
+one line
+  two line
+            three line        space
+                         end
+`
+console.log(paragraph)
