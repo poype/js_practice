@@ -73,3 +73,13 @@ one line
                          end
 `
 console.log(paragraph)
+
+// 字符串的一些API，JS中的字符串是不可以被修改的
+let s = "abcdefg"
+console.log(s.length)   // 7
+console.log(s.substring(3))    // defg
+console.log(s.substring(3,5))  // de
+console.log(s.indexOf("d"))  // 3
+console.log(s.replace('b', 'w'))  // awcdefg
+console.log(s.toUpperCase())  // ABCDEFG
+console.log(s.charAt(3))   // d
