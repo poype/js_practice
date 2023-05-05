@@ -39,3 +39,15 @@ console.log(NaN === NaN) // false
 
 // 无法精确表达0.1
 console.log(0.3 - 0.2) // 0.09999999999999998
+
+
+// BigInt表示任意精度整数，注意不能混用BigInt与常规数字
+let x = BigInt(999999999999999) // 999999999999999n
+let y = x * x * x * x * x;
+console.log(y)
+console.log(y / x)
+console.log(y / x / x)
+console.log(y / x / x / x)
+console.log(y / x / x / x / x)  // 999999999999999n，BigInt类型的数字后面有一个n字母
+
+console.log(100n) // BigInt字面量
