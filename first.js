@@ -51,3 +51,8 @@ console.log(y / x / x / x)
 console.log(y / x / x / x / x)  // 999999999999999n，BigInt类型的数字后面有一个n字母
 
 console.log(100n) // BigInt字面量
+
+
+// ########### Data类型 ###########
+console.log(new Date())   // UTC时间
+console.log(Date.now())   // 1683296996479
