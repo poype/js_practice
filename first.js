@@ -83,3 +83,12 @@ console.log(s.indexOf("d"))  // 3
 console.log(s.replace('b', 'w'))  // awcdefg
 console.log(s.toUpperCase())  // ABCDEFG
 console.log(s.charAt(3))   // d
+
+// 反引号定义模板字符串
+let person = "Bill"
+let greeting = `Hello ${person}`
+console.log(greeting)      // Hello Bill
+
+let sum = 1 + 2
+let calculation = `1 + 2 = ${sum}`
+console.log(calculation)   // 1 + 2 = 3
