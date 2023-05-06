@@ -100,3 +100,11 @@ console.log(calculation)   // 1 + 2 = 3
 // 布尔值的toString方法
 console.log(true.toString())
 console.log(false.toString())
+
+
+let b = false
+
+console.log(typeof(s))    // string
+console.log(typeof(sum))  // number
+console.log(typeof(b))    // boolean
+console.log(typeof(null)) // object
