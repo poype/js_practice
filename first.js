@@ -92,3 +92,7 @@ console.log(greeting)      // Hello Bill
 let sum = 1 + 2
 let calculation = `1 + 2 = ${sum}`
 console.log(calculation)   // 1 + 2 = 3
+
+
+
+// JS中的假值: false, undefined, null, 0, NaN, ""
