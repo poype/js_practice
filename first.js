@@ -135,3 +135,11 @@ console.log(sym_3 === sym_4);  // true
 
 // 通过keyFor函数可以获取构建符号值的字符串
 console.log(Symbol.keyFor(sym_3))  // shared
+
+
+
+// 全局对象
+// 在Node中，全局对象有一个名为global的属性，global属性指向全局对象本身，因此Node程序可以通过global引用全局对象本身
+// 浏览器中的全局对象是Window，它有一个自引用队属性window，通过window可以引用全局对象。
+// ES2020定义了globalThis作为在任何环境中引用全局对象的标准方式。
+console.log(globalThis == global)  // true
