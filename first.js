@@ -108,3 +108,30 @@ console.log(typeof(s))    // string
 console.log(typeof(sum))  // number
 console.log(typeof(b))    // boolean
 console.log(typeof(null)) // object
+
+
+// ########### 符号可以作为对象的属性名 ############
+// 在ES6之前，对象的属性名只能是字符串，从ES6开始，符号也可以作为对象的属性名。
+let symname = Symbol("propname")
+console.log(symname)    // Symbol(propname)
+
+let o = {}
+o[symname] = 123
+console.log(o);         // { [Symbol(propname)]: 123 }
+console.log(o[symname]) // 123
+
+// 要获取一个Symbol值，需要调用Symbol()函数。这个函数永远不会返回相同的值，即使每次传入的参数都一样。
+// 这意味着可以将调用Symbol函数取得的符号值安全地用于为对象添加新属性，而无需担心可能会重写已有的同名属性。
+let sym_1 = Symbol("test")
+let sym_2 = Symbol("test")
+console.log(sym_1 == sym_2) // false
+
+console.log(sym_1.toString());  // Symbol(test)
+
+// 用相同的字符串调用Symbol.for()函数时，会一直返回相同的符号值
+let sym_3 = Symbol.for("shared")
+let sym_4 = Symbol.for("shared")
+console.log(sym_3 === sym_4);  // true
+
+// 通过keyFor函数可以获取构建符号值的字符串
+console.log(Symbol.keyFor(sym_3))  // shared
