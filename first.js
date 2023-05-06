@@ -151,3 +151,9 @@ console.log(globalThis == global)  // true
 console.log("7" * "4")  // 28
 console.log(1 - "x")  // NaN
 console.log(NaN + " objects")  // NaN objects
+
+
+// 显示类型转换： Boolean(), Number(), String()
+console.log(Number("13"))  // 13
+console.log(String(false)); // false
+console.log(Boolean({}));  // true
