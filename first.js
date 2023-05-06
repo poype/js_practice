@@ -96,3 +96,7 @@ console.log(calculation)   // 1 + 2 = 3
 
 
 // JS中的假值: false, undefined, null, 0, NaN, ""
+
+// 布尔值的toString方法
+console.log(true.toString())
+console.log(false.toString())
