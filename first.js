@@ -143,3 +143,11 @@ console.log(Symbol.keyFor(sym_3))  // shared
 // 浏览器中的全局对象是Window，它有一个自引用队属性window，通过window可以引用全局对象。
 // ES2020定义了globalThis作为在任何环境中引用全局对象的标准方式。
 console.log(globalThis == global)  // true
+
+
+// 类型自动转换
+// 如果JS想要字符串，它就会把你提供的任何值都转为字符串。
+// 如果JS想要数字，它也会尝试把你提供的值转为一个数字，如果无法转为一个有效数字就转为NaN。
+console.log("7" * "4")  // 28
+console.log(1 - "x")  // NaN
+console.log(NaN + " objects")  // NaN objects
