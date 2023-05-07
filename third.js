@@ -31,3 +31,22 @@ console.log(array instanceof Number);  // false
 
 // 为了对表达式 o instanceof f 求值，JS会求值f.prototype，然后在 o 的原型链上查看是否有 f.prototype 这个值
 // 如果找到了就返回true。如果 f.prototype 不是 o 原型链上的一个值，则o不是f的实例。
+
+
+
+// delete 操作符
+let array_2 = ["a", "b", "c"]
+console.log(array_2);  // [ 'a', 'b', 'c' ]
+
+delete array_2[1]
+console.log(array_2);  // [ 'a', <1 empty item>, 'c' ]
+console.log(array_2.length);   // 3 , 注意，数组的长度没有变化
+
+let obj_2 = {
+    a: 1,
+    b: 2
+}
+console.log(obj_2);  // { a: 1, b: 2 }
+
+delete obj_2["a"]
+console.log(obj_2);  // { b: 2 }
