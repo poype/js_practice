@@ -45,3 +45,22 @@ console.log(JSON.stringify(o6));  // {"x":1,"y":2,"z":4,"s":5,"t":6}
 
 let json = '{"x":1,"y":2,"z":4,"s":5,"t":6}'
 console.log(JSON.parse(json))     // { x: 1, y: 2, z: 4, s: 5, t: 6 }
+
+
+// get 和 set, 后面就可以通过accessX访问x属性
+let o7 = {
+    x: 1, 
+    
+    get accessX() {
+        return this.x;
+    },
+
+    set accessX(x) {
+        this.x = x;
+    }
+}
+
+console.log(o7.accessX);  // 1
+o7.accessX = 99;
+console.log(o7.accessX);  // 99
+console.log(o7.x);  // 99
