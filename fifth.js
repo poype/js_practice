@@ -13,3 +13,7 @@ console.log(o2.toString);  // undefined
 
 let o3 = Object.create(Object.prototype)  // 相当于 new Object() 或 {}
 console.log(o3.toString);  // [Function: toString]
+
+
+// 针对对象o的任何修改操作，都只能影响o变量本身的值，而不会对o的原型链有任何影响
+// 所以delete操作符只能删除自有属性，不能删除继承属性
