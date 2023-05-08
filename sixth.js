@@ -50,3 +50,23 @@ let o = {
 
 let innerFunc = o.f()
 innerFunc()
+
+console.log("-----------------------------------");
+
+// 将箭头函数作为内部函数，则箭头函数的this指针与外部函数是一样的
+let o1 = {
+    x: 100,
+    f: function() {
+        let y = 999;
+        let self = this;
+    
+        return () => {
+            console.log(y)  // 999
+            console.log(this.x)  // 100
+            console.log(this === o1)  // true
+            console.log(self === this);  // true
+        }
+    }
+}
+
+o1.f()()
