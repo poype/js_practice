@@ -43,7 +43,7 @@ let o = {
         return function() {
             console.log(y)  // 999
             console.log(this.x);  // undefined
-            console.log(this == globalThis);  // true
+            console.log(this == globalThis);  // true  ，在严格模式下，内部函数的this指针会是undefined
         }
     }
 }
