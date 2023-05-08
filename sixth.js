@@ -28,3 +28,25 @@ testFunc((a, b, c) => {
     console.log(b);
     console.log(c);
 })
+
+
+// 嵌套函数
+// 内部函数可以读取外部函数定义的变量
+// 注意内部函数的this指针
+let o = {
+    x: 100,
+    f: function() {
+        let y = 999;
+    
+        console.log(this.x);  // 100
+
+        return function() {
+            console.log(y)  // 999
+            console.log(this.x);  // undefined
+            console.log(this == globalThis);  // true
+        }
+    }
+}
+
+let innerFunc = o.f()
+innerFunc()
