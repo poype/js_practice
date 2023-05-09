@@ -86,3 +86,13 @@ function Point(x, y, z) {
 
 let p = new Point(1, 2, 3);
 console.log(p);  // Point { x: 1, y: 2, z: 3 }
+
+
+// 给函数参数设置默认值
+function saySomething(stmt, to="You") {
+    console.log(`${stmt} ${to}`)
+}
+
+saySomething("Hello", "Lucy")
+saySomething("Welcome", "Marco")
+saySomething("Hello")  // Hello You
