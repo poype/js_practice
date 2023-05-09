@@ -114,3 +114,25 @@ function testRestFunc(message, ...rest) {
 }
 
 testRestFunc("test", "one", "two", "three", "four")
+
+
+console.log("--------------------------------");
+
+// 剩余形参 ...rest 是ES6才引入的，在ES6之前，都是利用arguments对象获取额外的参数
+// arguments封装了所有的实参，它类似数组，但不是数组
+function testArguments(message) {
+
+    console.log(arguments instanceof Array); // false ， arguments类似数组，但不是数组
+
+    for(let i = 0; i < arguments.length; i++) {
+        console.log(arguments[i]);
+    }
+}
+testArguments("test arguments", "one", "two", "three", "four")
+/* 打印结果：
+test arguments
+one
+two
+three
+four
+ */
