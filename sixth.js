@@ -96,3 +96,21 @@ function saySomething(stmt, to="You") {
 saySomething("Hello", "Lucy")
 saySomething("Welcome", "Marco")
 saySomething("Hello")  // Hello You
+
+
+
+console.log("--------------------------------");
+// 剩余形参, rest值就是Array类型
+function testRestFunc(message, ...rest) {
+    console.log(message)
+
+    console.log(rest instanceof Array);  // true
+
+    rest.push("last value")
+
+    for(let item of rest) {
+        console.log(item);
+    }
+}
+
+testRestFunc("test", "one", "two", "three", "four")
