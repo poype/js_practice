@@ -35,3 +35,34 @@ Hello World
 one-msg  two-msg
  */
 f2.apply(o, ["one-msg", "two-msg"])
+
+
+
+// bind方法会返回一个新的函数，这个新的函数会与一个对象绑定，即这个新的函数的this指针指向某个对象
+function f3(param1, param2) {
+    console.log(this == globalThis);
+    console.log(this);
+
+    console.log(this.message);
+
+    console.log(`${param1}  ${param2}`)
+}
+// g函数的this指针会指向对象o
+g = f3.bind(o)
+/* g函数执行的输出结果
+false
+{ message: 'Hello World' }
+Hello World
+one_param  two_param
+ */
+g("one_param", "two_param")
+
+/* f3函数本身还是全局函数，并没有与对象o绑定
+true
+<ref *1> Object [global] {
+    ...
+}
+undefined
+11111  22222
+ */
+f3("11111", "22222")
