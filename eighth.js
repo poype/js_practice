@@ -65,3 +65,20 @@ dog2.eat()
 // Animal Joge is eating
 // Black Dog Wangcai is running
 // Animal Wangcai is eating
+
+
+
+// 实例对象不能调用静态方法
+class Cat extends Animal {
+
+    static test() {
+        console.log(this.name)   // 静态方法中的this引用的不是实例对象本身，而是类(构造函数)本身
+        console.log(typeof this) // function
+    }
+}
+
+Cat.test()
+let cat = new Cat();
+cat.eat()
+cat.run()
+// cat.test()  TypeError: cat.test is not a function
