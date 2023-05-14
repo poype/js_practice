@@ -26,7 +26,7 @@ readFile("./callback1.js").then(content => {
 
 
 // 第二种使用promise的方式，使用catch方法接收处理异常结果的函数
-readFile("./callback.js")
+readFile("./callback2.js")
     .then(content => {
         console.log(content)
         // throw new Error("handle normal result error")
@@ -39,3 +39,21 @@ readFile("./callback.js")
 
 // 本质上Promise和回调是一样的，都是处理异步的结果，但使用Promise可以避免“缩进地狱”
 
+
+// Promise链
+// then方法的返回值也是Promise类型的对象
+// 在每个then方法返回的Promise对象中，包装了then方法参数函数return的值
+readFile("./content.txt")
+    .then(content => {
+        let length = content.length;
+        return content.substring(length - 10); // content的最后10个字符将被包装到Promise对象中传给下一个then方法
+    })
+    .then(last10 => {
+        console.log("-----------------start------------------");
+        console.log(last10);
+        console.log("-----------------end--------------------");
+    })
+    .catch(err => {   // 读取文件失败，或任何一个then方法报错，都会调用catch
+        console.log("handle content of file error");
+        console.log(err)
+    })
