@@ -25,4 +25,7 @@ async function test() {
     console.log(text)
 }
 
-test();
+// async方法的返回值是一个Promise对象。
+// 也就是说，async方法是一个异步方法。在底层实现中，该方法会作为一个回调函数被异步调用
+let ret = test();
+console.log(ret instanceof Promise) // true     而且这个true会先于文件内容打印
