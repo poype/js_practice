@@ -88,7 +88,7 @@ readFile("./content.txt")
     })
 
 // 一个Promise对象就代表一个异步操作，它有三种状态：Pending、Resolved(也叫fulfilled)、Rejected
-// 当Promise对象的状态由Pending切换到Resolved或Rejected状态时，则对应的then或catch方法就会被调用
+// 当Promise对象的状态由Pending切换到Resolved或Rejected状态时，对应的then或catch方法就会被调用
 
 // 当有多个then方法级联时，如果前一个then方法的返回值是普通value，则这个返回值会作为下一个then方法入参函数的入参
 // 如果前一个then方法的返回值又是一个Promise对象，则后面的then方法会等待这个Promise对象状态变为Resolved后再执行。
