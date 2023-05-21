@@ -22,3 +22,31 @@ for(let primeNumber of oneDigitPrimes()) {
     console.log(primeNumber)
 }
 
+
+console.log("--------------------------------------------")
+
+// 生成器示例
+function* fibonacciSequence() {
+    let x = 0, y = 1;
+    while(true) {
+        yield y;
+        [x, y] = [y, x + y];
+    }
+}
+
+let fibIterator = fibonacciSequence();
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
+console.log(fibIterator.next().value);
